@@ -1,0 +1,25 @@
+local.yml
+*.class
+.classpath
+.project
+.settings
+log/
+server/logs/
+server/newrelic/logs/
+tmp
+*.DS_Store
+# Package Files #
+*.jar
+*.war
+*.ear
+*.iml
+*.ipr
+target
+\.idea
+\.zola
+.settings
+.project
+.classpath
+!server/newrelic/newrelic.jar
+!server/newrelic/newrelic-api.jar
+!server/newrelic/newrelic-api-sources.jar
