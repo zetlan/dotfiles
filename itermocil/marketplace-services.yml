@@ -1,6 +1,6 @@
 windows:
   - name: marketplace-services
-    root: /web/tools/vagrant
+    root: $WEB_DIR/tools/vagrant
     layout: tiled
     panes:
       - commands:
@@ -13,7 +13,7 @@ windows:
         name: SVC Image
       - commands:
         - i2-badge svc-marketplace 
-        - vagrant ssh -c 'cd /web/svc-marketplace && git pull && mvn -DskipTests=true install clean install && cd /web/svc-marketplace/server && bin/service.rb run'
+        - vagrant ssh -c 'cd /web/svc-marketplace && mvn -DskipTests=true install clean install && cd /web/svc-marketplace/server && JVM_DEBUG=1 bin/service.rb run'
         name: SVC Marketplace
       - commands:
         - i2-badge svc-user 

@@ -1,6 +1,6 @@
 windows:
   - name: marketplace-web
-    root: /web/
+    root: $WEB_DIR/
     layout: tiled
     panes:
       - commands:
@@ -13,4 +13,6 @@ windows:
         - cd $WEB_DIR/web-nav
         - npm run dev-start
         - cd $WEB_DIR/web-marketplace
+        - git pull
+        - npm ci
         - npm run dev-start
