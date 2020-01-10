@@ -22,7 +22,7 @@ function install {
 install $HOME/.bashrc "cp bashrc $HOME/.bashrc"
 install $HOME/.zsh_functions "cp zsh_functions $HOME/.zsh_functions"
 install $HOME/.exrc "cp exrc $HOME/.exrc"
-install $HOME/.oh-my-zsh/custom/itermocil-auto-complete "cp itermocil/itermocil-auto-complete $HOME/.oh-my-zsh/custom/itermocil-auto-complete"
+install $HOME/.oh-my-zsh/custom/itermocil-auto-complete.zsh "cp itermocil/itermocil-auto-complete.zsh $HOME/.oh-my-zsh/custom/itermocil-auto-complete.zsh"
 
 if test -d "$HOME/.itermocil"; then
     echo "Itermocil directory already exists"
