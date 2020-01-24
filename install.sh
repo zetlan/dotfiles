@@ -4,7 +4,7 @@ function is_installed {
     if test -f $1 && grep -q DOTFILES $1; then
         return 0
     else 
-        return -1
+        return 1
     fi
 }
 
