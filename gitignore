@@ -23,3 +23,7 @@ target
 !server/newrelic/newrelic.jar
 !server/newrelic/newrelic-api.jar
 !server/newrelic/newrelic-api-sources.jar
+.vscode
+# Python stuff #
+__pycache__
+
