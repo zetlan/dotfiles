@@ -9,20 +9,20 @@ function is_installed {
 }
 
 function install {
-    local file=$1
-    local cmd=$2
-    if is_installed $file; then
-        echo "$file already installed"
+    local dest=$1
+    local src=$2
+    if is_installed $dest; then
+        echo "$dest already installed"
     else
-        echo "Installing $file..."
-        $cmd
+        echo "Installing $dest"
+        cat $src | tee -a $dest
     fi
 }
 
-install $HOME/.bashrc "cp bashrc $HOME/.bashrc"
-install $HOME/.zsh_functions "cp zsh_functions $HOME/.zsh_functions"
-install $HOME/.exrc "cp exrc $HOME/.exrc"
-install $HOME/.oh-my-zsh/custom/itermocil-auto-complete.zsh "cp itermocil/itermocil-auto-complete.zsh $HOME/.oh-my-zsh/custom/itermocil-auto-complete.zsh"
+install $HOME/.bashrc bashrc
+install $HOME/.zsh_functions zsh_functions
+install $HOME/.exrc exrc
+install $HOME/.oh-my-zsh/custom/itermocil-auto-complete.zsh itermocil/itermocil-auto-complete.zsh
 
 if test -d "$HOME/.itermocil"; then
     echo "Itermocil directory already exists"
