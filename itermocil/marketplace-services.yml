@@ -8,26 +8,18 @@ windows:
         - vagrant ssh -c 'cd /web/svc-home && git pull && mvn -DskipTests=true clean install && cd /web/svc-home/server && bin/service.rb run'
         name: SVC Home
       - commands:
-        - i2-badge svc-image 
+        - i2-badge svc-image && sleep 1
         - vagrant ssh -c 'cd /web/svc-image && git pull && mvn -DskipTests=true clean install && cd /web/svc-image/server && bin/service.rb run'
         name: SVC Image
       - commands:
-        - i2-badge svc-user 
+        - i2-badge svc-user && sleep 2
         - vagrant ssh -c 'cd /web/svc-user && git pull && mvn -DskipTests=true clean install && cd /web/svc-user/server && bin/service.rb run'
         name: SVC User
       - commands:
-        - i2-badge svc-web-api 
+        - i2-badge svc-web-api && sleep 3
         - vagrant ssh -c 'cd /web/svc-web-api && git pull && mvn -DskipTests=true clean install && cd /web/svc-web-api/server && bin/service.rb run'
         name: SVC Web Api
       - commands:
-        - i2-badge svc-backoffice 
+        - i2-badge svc-backoffice && sleep 4
         - vagrant ssh -c 'cd /web/svc-backoffice && git pull && mvn -DskipTests=true clean install && cd /web/svc-backoffice/server && bin/service.rb run'
         name: SVC Back Office
-      - commands:
-        - i2-badge marketplace-out.log
-        - tail -f $HOME/.pm2/logs/web-marketplace-out.log
-        name: Tail marketplace log
-      - commands:
-        - i2-badge web-marketplace-error.log
-        - tail -f $HOME/.pm2/logs/web-marketplace-error.log
-        name: Tail marketplace error log
