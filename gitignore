@@ -27,3 +27,7 @@ target
 # Python stuff #
 __pycache__
 
+# stupid transient files in web/tools:
+laptop/szetlan_mac_*
+laptop/testfile
+users.json
