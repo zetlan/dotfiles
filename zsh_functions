@@ -7,3 +7,4 @@ i2-badge () {
 i2-badge localhost
 
 alias vagrant_ssh='cd $WEB_DIR/tools/vagrant && vagrant ssh'
+alias es_activate='ssh -L 8443:vpc-zola-production-h4qdqzhizodq3ufwm67fyiwfmi.us-east-1.es.amazonaws.com:443 52.5.99.28'
