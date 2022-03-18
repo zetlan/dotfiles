@@ -23,3 +23,11 @@ windows:
         - i2-badge svc-backoffice && sleep 16
         - vagrant ssh -c 'cd /web/svc-backoffice && git pull && mvn -DskipTests=true -Dmvn.test.skip=true clean install && cd /web/svc-backoffice/server && bin/service.rb run'
         name: SVC Back Office
+      - commands:
+        - i2-badge svc-order && sleep 32
+        - vagrant ssh -c 'cd /web/svc-order && git pull && mvn -DskipTests=true -Dmvn.test.skip=true clean install && cd /web/svc-order/server && bin/service.rb run'
+        name: SVC Order
+      - commands:
+        - i2-badge svc-cart && sleep 64
+        - vagrant ssh -c 'cd /web/svc-cart && git pull && mvn -DskipTests=true -Dmvn.test.skip=true clean install && cd /web/svc-cart/server && bin/service.rb run'
+        name: SVC Cart
