@@ -28,11 +28,13 @@ function install {
     fi
 }
 
+
 if is_vagrant; then
     echo "*** Installing to vagrant"
     install $HOME/.bashrc bashrc
 else
     ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+    mkdir -p $ZSH_CUSTOM
     echo "*** Installing to host"
     cp zsh_functions $ZSH_CUSTOM/dotfiles.zsh
     install $ZSH_CUSTOM/itermocil-auto-complete.zsh itermocil/itermocil-auto-complete.zsh
