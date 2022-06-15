@@ -2,7 +2,7 @@
 
 function is_vagrant {
     local hostname=`hostname`
-    if test "$hostname" = "dev.zola"; then
+    if test "$hostname" = "dev-m1" ; then
         return 0
     else
         return 1
