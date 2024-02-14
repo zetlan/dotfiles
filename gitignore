@@ -16,18 +16,9 @@ tmp
 *.ipr
 target
 \.idea
-\.zola
 .settings
 .project
 .classpath
-!server/newrelic/newrelic.jar
-!server/newrelic/newrelic-api.jar
-!server/newrelic/newrelic-api-sources.jar
 .vscode
 # Python stuff #
 __pycache__
-
-# stupid transient files in web/tools:
-laptop/szetlan_mac_*
-laptop/testfile
-users.json
